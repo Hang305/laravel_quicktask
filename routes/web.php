@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LanguageController;
 use App\Models\Task;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
@@ -33,4 +34,12 @@ Route::post('/task', function (Request $request) {
 Route::delete('/task/{id}', function (Task $id) {
 
 });
+/**
+ * Change Language
+ */
+Route::get('change-language/{language}', [LanguageController::class,'changeLanguage'])->name('user.change-language');
 
+Route::group(['middleware' => 'locale'], function() {
+    Route::get('change-language/{language}', [LanguageController::class,'changeLanguage'])
+        ->name('user.change-language');
+});
