@@ -1,0 +1,10 @@
+{
+    "task": {
+        "task": "Nhiệm vụ",
+        "add_task": "Thêm nhiệm vụ",
+        "new_task": "Nhiệm vụ mới",
+        "list_task":"Danh sách nhiệm vụ"
+    },
+    "english": "Tiếng Anh",
+    "vietnam": "Tiếng Việt"
+}

@@ -1,0 +1,11 @@
+{
+   "task": {
+       "task":"Task",
+       "add_task" :"Add task",
+       "new_task":" New task",
+       "list_task":"List task"
+   },
+   "english":"English",
+   "vietnam":"VietNam"
+
+}
