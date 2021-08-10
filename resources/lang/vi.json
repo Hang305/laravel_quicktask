@@ -1,10 +1,10 @@
 {
-    "task": {
-        "task": "Nhiệm vụ",
-        "add_task": "Thêm nhiệm vụ",
-        "new_task": "Nhiệm vụ mới",
-        "list_task":"Danh sách nhiệm vụ"
-    },
+    "task": "Nhiệm vụ",
+    "add_task": "Thêm nhiệm vụ",
+    "new_task": "Nhiệm vụ mới",
+    "list_task": "Danh sách nhiệm vụ",
+    "current_task": "Nhiệm vụ hiện tại",
+    "delete_task": "Xóa nhiệm vụ",
     "english": "Tiếng Anh",
     "vietnam": "Tiếng Việt"
 }

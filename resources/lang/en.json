@@ -1,11 +1,10 @@
 {
-   "task": {
-       "task":"Task",
-       "add_task" :"Add task",
-       "new_task":" New task",
-       "list_task":"List task"
-   },
-   "english":"English",
-   "vietnam":"VietNam"
-
+    "task": "Task",
+    "add_task": "Add task",
+    "new_task": " New task",
+    "list_task": "List task",
+    "current_task": "Current tasks",
+    "delete_task": "Delete task",
+    "english": "English",
+    "vietnam": "VietNam"
 }
