@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Task;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/**
+ * Displaying Existing Tasks
+ */
 Route::get('/', function () {
-    return view('welcome');
+    return view('tasks');
 });
+/**
+ * Add tasks
+ */
+Route::post('/task', function (Request $request) {
+    //
+});
+/**
+ * Delete tasks
+ */
+Route::delete('/task/{id}', function (Task $id) {
+
+});
+
