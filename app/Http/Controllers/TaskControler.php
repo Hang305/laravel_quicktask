@@ -81,8 +81,10 @@ class TaskControler extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Task $id)
     {
-        //
+        $id->delete();
+
+        return redirect('/');
     }
 }
