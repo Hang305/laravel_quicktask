@@ -25,8 +25,8 @@
             <div class="navbar-header">
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Task List
+                <a class="navbar-brand" href="{{ route('home') }}">
+                   {{__('list_task')}}
                 </a>
             </div>
 
@@ -37,5 +37,5 @@
 
     <!-- JavaScripts -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script></body>
-
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </html>

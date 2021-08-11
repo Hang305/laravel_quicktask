@@ -1,9 +1,12 @@
 <?php
 
 use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\TaskControler;
 use App\Models\Task;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
+
+use function GuzzleHttp\Promise\task;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,27 +22,24 @@ use Illuminate\Support\Facades\Route;
 /**
  * Displaying Existing Tasks
  */
-Route::get('/', function () {
-    return view('tasks');
-});
+Route::get('/', [TaskControler::class,'index'])->name('home');
 /**
  * Add tasks
  */
-Route::post('/task', function (Request $request) {
-    //
-});
+Route::get('/tasks', [TaskControler::class, 'index']);
+Route::post('/tasks', [TaskControler::class,'store'])->name('task.store');
 /**
  * Delete tasks
  */
-Route::delete('/task/{id}', function (Task $id) {
+Route::delete('/task/{id}', function(Request $request){
 
 });
 /**
  * Change Language
  */
-Route::get('change-language/{language}', [LanguageController::class,'changeLanguage'])->name('user.change-language');
+Route::get('change-language/{language}', [LanguageController::class, 'changeLanguage'])->name('user.change-language');
 
-Route::group(['middleware' => 'locale'], function() {
-    Route::get('change-language/{language}', [LanguageController::class,'changeLanguage'])
+Route::group(['middleware' => 'locale'], function () {
+    Route::get('change-language/{language}', [LanguageController::class, 'changeLanguage'])
         ->name('user.change-language');
 });
