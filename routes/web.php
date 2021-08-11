@@ -31,9 +31,7 @@ Route::post('/tasks', [TaskControler::class,'store'])->name('task.store');
 /**
  * Delete tasks
  */
-Route::delete('/task/{id}', function(Request $request){
-
-});
+Route::delete('/task/{id}', [TaskControler::class, 'destroy'])->name('task.destroy');
 /**
  * Change Language
  */

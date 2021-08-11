@@ -42,9 +42,8 @@
         @if (count($tasks) > 0)
             <div class="panel panel-default">
                 <div class="panel-heading">
-                   {{__('current_task')}}
+                    {{ __('current_task') }}
                 </div>
-
                 <div class="panel-body">
                     <table class="table table-striped task-table">
                         <thead>
@@ -57,8 +56,18 @@
                                     <td class="table">
                                         <div>{{ $task->name }}</div>
                                     </td>
-
                                     <!-- Task Delete Button -->
+                                    <td>
+                                        {{-- <form action="{{ url('task/' . $task->id) }}" method="POST"> --}}
+                                        <form action="{{ route('task.destroy', ['id' => $task->id]) }}" method="POST">
+                                            {{ csrf_field() }}
+                                            {{ method_field('DELETE') }}
+
+                                            <button type="submit" class="btn btn-danger">
+                                                <i class="fa fa-btn fa-trash"></i>Delete
+                                            </button>
+                                        </form>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
